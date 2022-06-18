@@ -1,0 +1,33 @@
+//Contect on : Mohan angappan,
+	//LinkedIn: https://www.linkedin.com/in/mohan-angappan-491825130
+	//Twitter:https://twitter.com/MohanAngappan
+	//GitHub:https://github.com/MohanAngappan
+	//Gmail:almohan532001@gmail.com
+
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+
+// You should get Auth Token in the Blynk App.
+// Go to the Project Settings (nut icon).
+char auth[] = "vrM_Fq2hN8YL4DNl6rNmx95fomEGOqAu";//Enter your Auth token
+char ssid[] = "google";//Enter your WIFI name
+char pass[] = "google12345";//Enter your WIFI password
+
+void setup()
+{
+  // Debug console
+  Serial.begin(9600);
+
+  Blynk.begin(auth, ssid, pass);
+  // You can also specify server:
+  //Blynk.begin(auth, ssid, pass, "blynk-cloud.com", 80);
+  //Blynk.begin(auth, ssid, pass, IPAddress(192,168,1,100), 8080);
+}
+
+void loop()
+{
+  Blynk.run();
+  // You can inject your own code or combine it with other sketches.
+  // Check other examples on how to communicate with Blynk. Remember
+  // to avoid delay() function!
+}
